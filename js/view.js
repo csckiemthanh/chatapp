@@ -8,6 +8,12 @@ case 'welcomeScreen' :
 case 'registerScreen':
     document.getElementById('app')
     .innerHTML = components.registerScreen
+    document.getElementById('redirect-to-login').addEventListener('click',(event)=>{
+        view.setActiveScreen('loginScreen')
+        document.getElementById('redirect-to-register').addEventListener('click',(event)=>{
+            view.setActiveScreen('registerScreen')
+        })
+    })
     const registerForm=document.getElementById('register-form')
     registerForm.addEventListener('submit',(event)=> {
         event.preventDefault()
