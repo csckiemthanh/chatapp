@@ -3,7 +3,9 @@
     height: 100vh;
     background-size: cover; 
     display: flex;
+    
     justify-content: flex-end;
+
 
 }
 .login-container .aside-right{
@@ -25,4 +27,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
