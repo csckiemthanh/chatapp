@@ -93,3 +93,6 @@ model.listenConversationsChange = () =>{
     }
   })
 }
+ model.createConversation = ( data)=>{
+   firebase.firestore().collection(model.collectionName).add(data)
+ }
