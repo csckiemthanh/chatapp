@@ -5,55 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/chat.css">
+
 </head>
 <body>
-    <div class = "register-container">
-        <div class="aside-right">
-            <div class="header">
-                <h3>MindX chat</h3>
-            </div>
-    
-                <form id="register-form">
-                <div class="input-name-wrapper">
-                    <div class="input-wrapper">
-                    <input type="text" name = "first-name" placeholder="First name...">
-                    <div class="error" id="First-name-error"></div>
-                    </div>
-                    <div class="input-wrapper">
-                    <input type="text" name = "last-name" placeholder="Last name...">
-                    <div class="error" id="Last-name-error"></div>
-                    </div>
-                </div>
-                <div class="input-wrapper">
-                    <input type="text"
-                    placeholder="Email..."
-                    name="email">
-                    <div class = "error" id="email-error"></div>
-                </div>
-                <div class="input-wrapper">
-                    <input type="password"
-                    placeholder="Password.."
-                    name="password">
-                    <div class="error" id="password-error"></div>
-                </div>
-                <div class="input-wrapper">
-                    <input type="password"
-                    placeholder="Comfirm Password.."
-                    name="comfirm-password">
-                    <div class="error" id="comfirm password-error"></div>
-                </div>
-                <div class="form-action">
-                    <span id="redirect-to-login">
-                        Already have an account? Login
-                    </span>
-                    <button class= "btn" type="submit">
-                        Register
-                    </button>
-                </div>
-                </form>  
+    <div class="chat-container">
+        <div class="header">
+          MindX Chat
         </div>
-    </div>
-    
+        <div class="main">
+            <div class="aside-left">
+                <div class="create-conversation">
+                    <button class="btn"> + New conversation</button>
+                </div>
+                <div class="list-conversations">
+                    <div class="conversation current cursor-pointer">
+                        <div class="conversation-title">First conversation</div>
+                        <div class="conversation-num-user">2 users</div>
+                    </div>
+                    <div class="conversation cursor-pointer">
+                        <div class="conversation-title">Second conversation</div>
+                        <div class="conversation-num-user">2 users</div>
+                    </div>
+                </div>
+            </div>
+          <div class="conversation-detail">
+            <div class="conversation-header">
+              First conversation
+            </div>
+            <div class="list-messages">
+            </div>
+            <form id="send-message-form">
+              <div class="input-wrapper">
+                <input type="text" name="message"
+                  placeholder="Type a message">
+              </div>
+              <button type="submit">
+                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        </div>
 </body>
 </html>
