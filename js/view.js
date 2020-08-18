@@ -130,6 +130,19 @@ view.showCurrentConversation = () => {
     view.addMessage(message)
   }
   view.scrollToEndElement()
+  view.showListUsers(model.currentConversation.users)
+}
+view.showListUsers = (users) => {
+  document.querySelector('.list-user').innerHTML=''
+  for(user of users) {
+    view.addUser(user)
+  }
+}
+view.addUser= (user) => {
+  const userWrapper = document.createElement('div')
+  userWrapper.classList.add('user')
+  userWrapper.innerText = user
+  document.querySelector('.list-user').appendChild(userWrapper)
 }
 view.scrollToEndElement = () => {
   const element = document.querySelector('.list-messages')
@@ -160,7 +173,11 @@ view.addConversation = (conversation) => {
     document.querySelector('.current').classList.remove('current')
     conversationWrapper.classList.add('current')
     // thay doi model.currentConversation
-    model.currentConversation = conversation
+    for(oneConversation of model.conversations){
+      if(oneConversation.id === conversation.id){
+        model.currentConversation = oneConversation
+      }
+    }
     // in cac tin nhan cua model.currentConversation len man hinh
     view.showCurrentConversation()
   })

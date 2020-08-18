@@ -98,6 +98,7 @@ components.chatScreen = `
     <div class="list-conversations">
     </div>
   </div>
+
   <div class="conversation-detail">
     <div class="conversation-header">
       First conversation
@@ -106,38 +107,49 @@ components.chatScreen = `
     </div>
     <form id="send-message-form">
       <div class="input-wrapper">
-        <input type="text" name="message"
-          placeholder="Type a message">
+        <input type="text" name="message" placeholder="Type a message">
       </div>
       <button type="submit">
         <i class="fa fa-paper-plane" aria-hidden="true"></i>
       </button>
     </form>
   </div>
+
+  <div class="aside-right">
+  <div class="list-user"></div>
+
+    <form id="add-user-form">
+      <input class="input-wrapper">
+      <input type="text" placeholder="Input friend email" name="email">
+      <div class="error" id="add-user-email-error"></div>
+      <button class="btn" type="submit">Add</button>
+    </form>
+  </div>
+
 </div>
 </div>
 `
-components.createConversation = `
+components.createConversation=`
 <div class="create-conversation-container">
 <div class="header">
-  MindX chat
+    Mindx chat
 </div>
-<div class="main" style="padding: 50px 20%">
-  <form id="create-conversation-form">
-    <div>
-      Create a new conversation
-    </div>
-    <div class="input-wrapper">
-      <input type="text" placeholder="Conversation name" name="conversationTitle">
-      <div class="error" id="conversation-name-error"></div>
-    </div>
-    <div class="input-wrapper">
-      <input type="text" placeholder="Friend email" name="conversationEmail">
-      <div class="error" id="conversation-email-error"></div>
-    </div>
-    <button class="btn" type="submit">Save</button>
-    <button class="btn btn-light" type="button" id="back-to-chat">Cancel</button>
-  </form>
+<div class="main" style="padding: 50px 20%;">
+    <form id="create-conversation-form">
+        <div>
+            Create a new conversation
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Conversation name" name="conversationTitle">
+            <div class="error" id="conversation-name-error"></div>
+        </div>
+        <div class="input-wrapper">
+            <input type="email" placeholder="Friend email" name="conversationEmail">
+            <div class="error" id="conversation-email-error"></div>
+        </div>
+        <button class="btn" type="submit">Save</button>
+        <button class="btn btn-light" type="button" id="back-to-chat">Cancel</button>
+    </form>
 </div>
 </div>
 `

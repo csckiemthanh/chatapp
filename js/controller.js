@@ -97,3 +97,12 @@ controller.createConversation = ({conversationTitle, conversationEmail}) => {
   }
 
 }
+controller.addUser=(friendEmail) => {
+  document.getElementById('add-user-email-error').innerText=''
+  if(friendEmail.trim()===''){
+      document.getElementById('add-user-email-error').innerText='Please input friend email.' 
+  }
+  if(friendEmail!=''){
+      model.addUser(friendEmail)
+  }
+}
